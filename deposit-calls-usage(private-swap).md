@@ -26,3 +26,4 @@ const multiCall = await account.execute([
 await account.waitForTransaction(multiCall.transaction_hash);
 await sdk.withdraw(multiCall.transaction_hash, [recipient_addr]) 
 ```
+The code above shows an example on how to make a private swap.
