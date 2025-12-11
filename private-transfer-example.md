@@ -20,7 +20,7 @@ let calls = await sdk.generate_approve_and_deposit_calls(amount, STRK_ADDR)
 const multiCall = await account.execute(calls);
 await account.waitForTransaction(multiCall.transaction_hash);
 
-await download_notes(multiCall.transaction_hash)
+await sdk.download_notes(multiCall.transaction_hash)
 
 // withdraw your deposited funds to the address in the recipient list
 // withdraw has two arguments the txhash of the deposit execution and a list of recipients 
